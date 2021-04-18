@@ -21,6 +21,6 @@ namespace People.Interfaces
 
         void AtualizarURL(int id, FuncionarioDomain Nome);
 
-        void AtualizarUnico(FuncionarioDomain Nome);
+        void AtualizarUnico(string Nome, FuncionarioDomain Name);
     }
 }

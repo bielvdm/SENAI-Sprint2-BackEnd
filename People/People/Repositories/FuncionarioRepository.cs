@@ -31,9 +31,52 @@ namespace People.Repositories
             }
         }
 
-        public void AtualizarUnico(FuncionarioDomain Nome)
+        public void AtualizarUnico(string Name, FuncionarioDomain Nome)
         {
-            throw new NotImplementedException();
+            using (SqlConnection conexao = new SqlConnection(stringconexao))
+            {
+                string queryAtualizarItem;
+
+                switch (Name)
+                {
+                    case "nome":
+
+                        queryAtualizarItem = ("UPDATE Funcionarios SET NomeFuncionario = @Name WHERE NomeFuncionario = @Nome");
+                   
+                        break;
+
+                    case "sobrenome":
+
+                        queryAtualizarItem = ("UPDATE Funcionarios SET SobrenomeFuncionario = @Sobrenome WHERE NomeFuncionario = @Nome");
+
+                        break;
+
+                    case "datadenascimento":
+
+                        queryAtualizarItem = ("UPDATE Funcionarios SET DatadeNascimento = @DataDeNascimento WHERE NomeFuncionario = @Nome");
+
+                        break;
+
+                    default:
+
+                        queryAtualizarItem = ("UPDATE Funcionarios SET NomeFuncionario = @Nome, SobrenomeFuncionario = @Sobrenome , DatadeNascimento = @DataDeNascimento WHERE NomeFuncionario = @Nome");
+
+                        break;
+                }
+
+                using (SqlCommand comando = new SqlCommand(queryAtualizarItem, conexao))
+                {
+
+                    comando.Parameters.AddWithValue("@Name", Name);
+                    comando.Parameters.AddWithValue("@Nome", Nome.NomeFuncionario);
+                    comando.Parameters.AddWithValue("@Sobrenome", Name.SobrenomeFuncionario);
+                    comando.Parameters.AddWithValue("@DataDeNascimento", Name.DatadeNascimento);
+
+                    conexao.Open();
+
+                    comando.ExecuteNonQuery();
+                }
+            }
         }
 
         public void AtualizarURL(int id, FuncionarioDomain Nome)

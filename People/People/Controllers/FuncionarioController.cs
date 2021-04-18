@@ -23,7 +23,7 @@ namespace People.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post (FuncionarioDomain NovoNome)
+        public IActionResult Post(FuncionarioDomain NovoNome)
         {
             _FuncionarioRepository.InserirNovo(NovoNome);
 
@@ -77,6 +77,12 @@ namespace People.Controllers
 
         }
 
+
+        [HttpPut("{Nome}")]
+        public IActionResult AtualizarUnico (FuncionarioDomain Nome)
+        {
+            FuncionarioDomain FuncionarioBuscado = _FuncionarioRepository.AtualizarUnico(Nome);
+        }
 
         [HttpGet]
         public IActionResult Get ()
