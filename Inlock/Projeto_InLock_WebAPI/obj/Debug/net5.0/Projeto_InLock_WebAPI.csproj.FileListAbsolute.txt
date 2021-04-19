@@ -28,3 +28,10 @@ C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Inlock\Projeto_InLock_WebAPI\obj\Debu
 C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Inlock\Projeto_InLock_WebAPI\obj\Debug\net5.0\ref\Projeto_InLock_WebAPI.dll
 C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Inlock\Projeto_InLock_WebAPI\obj\Debug\net5.0\Projeto_InLock_WebAPI.pdb
 C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Inlock\Projeto_InLock_WebAPI\obj\Debug\net5.0\Projeto_InLock_WebAPI.genruntimeconfig.cache
+C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Inlock\Projeto_InLock_WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Inlock\Projeto_InLock_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Inlock\Projeto_InLock_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Inlock\Projeto_InLock_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Inlock\Projeto_InLock_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Inlock\Projeto_InLock_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Inlock\Projeto_InLock_WebAPI\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll

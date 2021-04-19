@@ -52,7 +52,21 @@ namespace Projeto_InLock_WebAPI.Repositories
 
         public void CadastrarUsuario(UsuarioDomain NovoUsuario)
         {
-            throw new NotImplementedException();
+            using (SqlConnection conexao = new SqlConnection (stringConexao))
+            {
+                string QueryCadastrar = ("INSERT INTO Usuarios (Email, Senha, IdTipoUsuario) VALUES ('@email', '@senha', @id)");
+
+                using (SqlCommand comando = new SqlCommand (QueryCadastrar, conexao))
+                {
+                    comando.Parameters.AddWithValue("@email", NovoUsuario.Email);
+                    comando.Parameters.AddWithValue("@senha", NovoUsuario.Senha);
+                    comando.Parameters.AddWithValue("@id", NovoUsuario.IdTpoUsuario);
+
+                    conexao.Open();
+
+                    comando.ExecuteNonQuery();
+                }
+            }
         }
     }
 }
