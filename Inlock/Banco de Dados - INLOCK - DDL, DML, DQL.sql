@@ -79,3 +79,9 @@ SELECT NomeJogo, Valor, Descricao FROM Jogos WHERE IdJogo = 2
 
 --Buscar um estúdio por idEstudio
 SELECT NomeEstudio FROM Estudios WHERE IdEstudio = 2
+
+--Extra
+--Mostrar a lista de todos os estúdios e incluir na lista a lista de jogos daquele determinado estúdio;
+SELECT NomeEstudio, NomeJogo FROM Estudios 
+LEFT JOIN Jogos
+ON Estudios.IdEstudio = Jogos.IdEstudio

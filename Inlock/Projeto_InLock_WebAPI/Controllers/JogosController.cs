@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Projeto_InLock_WebAPI.Domains;
 using Projeto_InLock_WebAPI.Interfaces;
@@ -30,7 +31,7 @@ namespace Projeto_InLock_WebAPI.Controllers
             return Ok(Listando);
         }
 
-        
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult CadastrarPost(JogosDomain NovoJogo)
         {

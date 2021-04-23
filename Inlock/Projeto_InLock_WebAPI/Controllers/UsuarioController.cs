@@ -47,10 +47,10 @@ namespace Projeto_InLock_WebAPI.Controllers
             {
                 new Claim (JwtRegisteredClaimNames.Email, UsuarioBuscado.Email),
                 new Claim (JwtRegisteredClaimNames.Jti, UsuarioBuscado.IdUsuario.ToString()),
-                new Claim (ClaimTypes.Role, UsuarioBuscado.tipoUsuario.Titulo)
+                new Claim (ClaimTypes.Role, UsuarioBuscado.IdTpoUsuario.ToString())
             };
 
-            var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("40028922"));
+            var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("projetoInLock-Games-WebAPI"));
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 

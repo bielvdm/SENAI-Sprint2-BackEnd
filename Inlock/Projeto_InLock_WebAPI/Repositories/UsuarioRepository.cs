@@ -1,10 +1,7 @@
 ﻿using Projeto_InLock_WebAPI.Domains;
 using Projeto_InLock_WebAPI.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Projeto_InLock_WebAPI.Repositories
 {
@@ -37,6 +34,8 @@ namespace Projeto_InLock_WebAPI.Repositories
                             Email        = rdr[1].ToString(),
                             Senha        = rdr[2].ToString(),
                             IdTpoUsuario = Convert.ToInt32(rdr[3])
+
+                 
                         };
 
                         return usuarioBuscado;

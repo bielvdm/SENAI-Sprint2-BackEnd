@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "e135db79-fbbd-4497-bce9-3336965c66d5",
+		"name": "InLock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar Jogos com Estudio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44380/api/jogos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"api",
+						"jogos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Novo Jogo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"NomeJogo\": \"GTA\",\r\n\"Valor\": 200,\r\n\"Descricao\": \"Esse jogo é super top :)\",\r\n\"DataDeLancamento\": \"2003-06-30\",\r\n\"IdEstudio\": 2}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44380/api/jogos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"api",
+						"jogos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Novo Usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Email\" : \"gabrielvdm2010@hotmail.com\",\r\n\"Senha\" : \"gabriel\",\r\n\"IdTipoUsuario\": \"2\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44380/api/usuario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Email\" : \"admin@admin.com\",\r\n\"Senha\" : \"admin\",\r\n\"IdTipoUsuario\" : 1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44380/api/usuario/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"api",
+						"usuario",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Extra, Listar Estudio com Jogos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44380/api/estudio",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"api",
+						"estudio"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
