@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,28 @@ namespace Hroads_WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddAuthentication(option =>
+            {
+                option.DefaultAuthenticateScheme = "JwtBearer";
+                option.DefaultChallengeScheme = "JwtBearer";
+            })
+
+            .AddJwtBearer("JwtBearer", option =>
+            {
+                option.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("hroads-webapi-token")),
+                    ClockSkew = TimeSpan.FromMinutes(20),
+                    ValidIssuer = "Hroads_WebAPI",
+                    ValidAudience = "Hroads_WebAPI"
+                };
+            });
+
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -28,6 +51,10 @@ namespace Hroads_WebAPI
             }
 
             app.UseRouting();
+
+            app.UseAuthentication();
+
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

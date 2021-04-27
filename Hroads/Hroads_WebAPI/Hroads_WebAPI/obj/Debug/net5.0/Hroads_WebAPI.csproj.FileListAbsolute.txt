@@ -21,7 +21,6 @@ C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\bi
 C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
@@ -54,3 +53,4 @@ C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\ob
 C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\obj\Debug\net5.0\ref\Hroads_WebAPI.dll
 C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\obj\Debug\net5.0\Hroads_WebAPI.pdb
 C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\obj\Debug\net5.0\Hroads_WebAPI.genruntimeconfig.cache
+C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
