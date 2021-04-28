@@ -11,6 +11,7 @@ namespace Hroads_WebAPI.Interfaces
         //crud
 
         List<Personagem> Listar();
+        List<Personagem> ListarComClasse();
 
         void Cadastro(Personagem Nome);
 

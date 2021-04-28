@@ -23,6 +23,12 @@ namespace Hroads_WebAPI.Controllers
             _personagemRepository = new PersonagemRepository();
         }
 
+        [HttpGet("Listar")]
+        public IActionResult GetClasse()
+        {
+            return Ok(_personagemRepository.ListarComClasse());
+        }
+
         [Authorize(Roles = "1,2")]
         [HttpGet]
         public IActionResult Get()

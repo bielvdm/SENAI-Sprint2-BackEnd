@@ -30,11 +30,16 @@ namespace Hroads_WebAPI.Controllers
         {
             Usuario usuarioBuscado = _UsuarioRepository.Login(Login.Email, Login.Senha);
 
+            if (usuarioBuscado == null)
+            {
+                return NotFound("Email e/ou Senha não encontrados no nosso sistema");
+            }
+
             var claim = new[]
             {
                 new Claim (JwtRegisteredClaimNames.Email, usuarioBuscado.Email),
                 new Claim (JwtRegisteredClaimNames.Jti, usuarioBuscado.IdTipoUsuario.ToString()),
-                new Claim (ClaimTypes.Role, usuarioBuscado.ToString())
+                new Claim (ClaimTypes.Role, usuarioBuscado.IdTipoUsuario.ToString())
             };
 
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("hroads-webapi-token"));

@@ -14,7 +14,6 @@ namespace Hroads_WebAPI.Domains
         public int CapacidadeMana { get; set; }
         public DateTime DataCriacao { get; set; }
         public DateTime DataAtualização { get; set; }
-
         public virtual Class IdClasseNavigation { get; set; }
     }
 }

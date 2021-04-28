@@ -47,9 +47,13 @@ namespace Hroads_WebAPI.Repositories
             ctx.SaveChanges();
         }
 
+        /// <summary>
+        /// /ele lista em ordem alfabetica tah
+        /// </summary>
+        /// <returns></returns>
         public List<Class> Listar()
         {
-            return ctx.Classes.ToList();
+            return ctx.Classes.OrderBy(c => c.NomeClasse).ToList();
         }
     }
 }

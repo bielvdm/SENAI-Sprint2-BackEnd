@@ -4,5 +4,11 @@
         <name>Hroads_WebAPI</name>
     </assembly>
     <members>
+        <member name="M:Hroads_WebAPI.Repositories.ClasseRepository.Listar">
+            <summary>
+            /ele lista em ordem alfabetica tah
+            </summary>
+            <returns></returns>
+        </member>
     </members>
 </doc>
