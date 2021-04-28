@@ -1,6 +1,7 @@
 ﻿using Hroads_WebAPI.Domains;
 using Hroads_WebAPI.Interfaces;
 using Hroads_WebAPI.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -22,6 +23,7 @@ namespace Hroads_WebAPI.Controllers
             _UsuarioRepository = new UsuarioRepository();
         }
 
+        [Authorize(Roles = "1,2")]
         [HttpGet]
         public IActionResult Listar()
         {
@@ -42,6 +44,7 @@ namespace Hroads_WebAPI.Controllers
             return StatusCode(204);
         }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(Usuario NovoUsuario)
         {

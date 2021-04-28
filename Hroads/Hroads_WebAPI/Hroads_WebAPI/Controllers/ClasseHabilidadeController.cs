@@ -14,43 +14,43 @@ namespace Hroads_WebAPI.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class PersonagemController : ControllerBase
+    public class ClasseHabilidadeController : ControllerBase
     {
-        private IPersonagemRepository _personagemRepository { get; set; }
+        private IClasseHabilidadeRepository _classeHabilidadeRepository { get; set; }
 
-        public PersonagemController()
+        public ClasseHabilidadeController()
         {
-            _personagemRepository = new PersonagemRepository();
+            _classeHabilidadeRepository = new ClasseHabilidadeRepository();
         }
 
         [Authorize(Roles = "1,2")]
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_personagemRepository.Listar());
+            return Ok(_classeHabilidadeRepository.Listar());
         }
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _personagemRepository.Deletar(id);
+            _classeHabilidadeRepository.Deletar(id);
 
             return StatusCode(204);
         }
 
-        [Authorize(Roles = "2")]
+        [Authorize(Roles = "1")]
         [HttpPost]
-        public IActionResult Post(Personagem Nome)
+        public IActionResult Post(ClassesHabilidade Nome)
         {
-            _personagemRepository.Cadastro(Nome);
+            _classeHabilidadeRepository.Cadastro(Nome);
 
             return StatusCode(201);
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(Personagem Nome, int id)
+        public IActionResult Put(ClassesHabilidade Nome, int id)
         {
-            _personagemRepository.Atualizar(Nome, id);
+            _classeHabilidadeRepository.Atualizar(id, Nome);
 
             return Ok();
         }
@@ -58,7 +58,7 @@ namespace Hroads_WebAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult GetBuscarId(int id)
         {
-            return Ok(_personagemRepository.BuscarPorId(id));
+            return Ok(_classeHabilidadeRepository.BuscarPorId(id));
         }
     }
 }

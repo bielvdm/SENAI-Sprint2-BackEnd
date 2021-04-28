@@ -54,3 +54,10 @@ C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\ob
 C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\obj\Debug\net5.0\Hroads_WebAPI.pdb
 C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\obj\Debug\net5.0\Hroads_WebAPI.genruntimeconfig.cache
 C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\bin\Debug\net5.0\Hroads_WebAPI.xml
+C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\obj\Debug\net5.0\Hroads_WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\adm\Desktop\SENAI-Sprint2-BackEnd\Hroads\Hroads_WebAPI\Hroads_WebAPI\obj\Debug\net5.0\Hroads_WebAPI.xml

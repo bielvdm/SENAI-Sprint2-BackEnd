@@ -1,6 +1,7 @@
 ﻿using Hroads_WebAPI.Domains;
 using Hroads_WebAPI.Interfaces;
 using Hroads_WebAPI.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -22,12 +23,14 @@ namespace Hroads_WebAPI.Controllers
             _TipoUsuarioRepository = new TipoUsuarioRepository ();
         }
 
+        [Authorize(Roles = "1,2")]
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(_TipoUsuarioRepository.Listar());
         }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post (TipoUsuario Nome)
         {

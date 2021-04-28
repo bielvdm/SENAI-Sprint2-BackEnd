@@ -26,14 +26,15 @@ namespace Hroads_WebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login (string Email, string Senha)
+        public IActionResult Login (Usuario Login)
         {
-            _UsuarioRepository.Login(Email, Senha);
+            Usuario usuarioBuscado = _UsuarioRepository.Login(Login.Email, Login.Senha);
 
             var claim = new[]
             {
-                new Claim (JwtRegisteredClaimNames.Email, Email),
-                new Claim (JwtRegisteredClaimNames.Jti, Senha)
+                new Claim (JwtRegisteredClaimNames.Email, usuarioBuscado.Email),
+                new Claim (JwtRegisteredClaimNames.Jti, usuarioBuscado.IdTipoUsuario.ToString()),
+                new Claim (ClaimTypes.Role, usuarioBuscado.ToString())
             };
 
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("hroads-webapi-token"));
